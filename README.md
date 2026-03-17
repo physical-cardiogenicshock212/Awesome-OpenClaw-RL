@@ -22,7 +22,7 @@
 
 Projects directly built on or derived from [OpenClaw](https://github.com/openclaw/openclaw) that bring RL training to personal AI assistants.
 
-### [OpenClaw-RL](https://github.com/Gen-Verse/OpenClaw-RL) ⭐ 3k
+### [OpenClaw-RL](https://github.com/Gen-Verse/OpenClaw-RL) ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/OpenClaw-RL?style=social)
 `TypeScript` | Train a personalized agent simply by talking to it.
 
 - Fully asynchronous 4-component loop: serving, rollout collection, PRM/judge evaluation, policy training
@@ -32,7 +32,7 @@ Projects directly built on or derived from [OpenClaw](https://github.com/opencla
 - Zero manual labeling — automatically organizes multi-turn interactions into training trajectories
 - 📄 [Technical Report](https://arxiv.org/abs/2603.10165) — #1 on [HuggingFace Daily Papers](https://huggingface.co/papers/2603.10165)
 
-### [MetaClaw](https://github.com/aiming-lab/MetaClaw) ⭐ 1.3k
+### [MetaClaw](https://github.com/aiming-lab/MetaClaw) ![GitHub stars](https://img.shields.io/github/stars/aiming-lab/MetaClaw?style=social)
 `Python` | Just talk to your agent — it learns and EVOLVES.
 
 - OpenAI-compatible proxy intercepts interactions + injects skills + meta-learns
@@ -41,7 +41,7 @@ Projects directly built on or derived from [OpenClaw](https://github.com/opencla
 - Auto skill summarization and evolution after each session
 - Three modes: `skills_only` / `rl` / `madmax` (default: RL + scheduler)
 
-### [Claw-R1](https://github.com/AgentR1/Claw-R1) ⭐ 99
+### [Claw-R1](https://github.com/AgentR1/Claw-R1) ![GitHub stars](https://img.shields.io/github/stars/AgentR1/Claw-R1?style=social)
 `Python` | Empowering OpenClaw with Advanced Agentic RL.
 
 - **Middleware Layer** (Gateway Server + DataPool) decouples Agent side from Training side
@@ -57,7 +57,7 @@ Projects directly built on or derived from [OpenClaw](https://github.com/opencla
 
 General-purpose frameworks for training LLM Agents with reinforcement learning.
 
-### [Agent-R1](https://github.com/AgentR1/Agent-R1) ⭐ High
+### [Agent-R1](https://github.com/AgentR1/Agent-R1) ![GitHub stars](https://img.shields.io/github/stars/AgentR1/Agent-R1?style=social)
 `Python` | Training Powerful LLM Agents with End-to-End RL.
 
 - Define domain-specific tools and reward functions to extend
@@ -66,7 +66,7 @@ General-purpose frameworks for training LLM Agents with reinforcement learning.
 - Custom tool environments (e.g., ReTool implementation)
 - 📄 [Technical Report](https://arxiv.org/abs/2511.14460)
 
-### [rLLM](https://github.com/rllm-org/rllm) ⭐ High
+### [rLLM](https://github.com/rllm-org/rllm) ![GitHub stars](https://img.shields.io/github/stars/rllm-org/rllm?style=social)
 `Python` | Democratizing Reinforcement Learning for Language Agents.
 
 - Custom agents & environments, RL training + deployment in one framework
@@ -89,7 +89,7 @@ Scalable Agent RL framework and algorithm from MiniMax.
 
 Foundational RL training libraries that power the Agentic RL ecosystem.
 
-### [OpenRLHF](https://github.com/OpenRLHF/OpenRLHF) ⭐ High
+### [OpenRLHF](https://github.com/OpenRLHF/OpenRLHF) ![GitHub stars](https://img.shields.io/github/stars/OpenRLHF/OpenRLHF?style=social)
 `Python` | High-performance, production-ready RLHF framework.
 
 - Ray + vLLM distributed architecture with unified agent-based design
@@ -98,7 +98,7 @@ Foundational RL training libraries that power the Agentic RL ecosystem.
 - Production-ready (NVIDIA ProRL V2 uses REINFORCE++-baseline)
 - 📖 [Documentation](https://openrlhf.readthedocs.io/)
 
-### [veRL](https://github.com/volcengine/verl) ⭐ High
+### [veRL](https://github.com/volcengine/verl) ![GitHub stars](https://img.shields.io/github/stars/volcengine/verl?style=social)
 `Python` | Flexible and efficient RL training library (ByteDance).
 
 - Hybrid-Controller programming model for flexible RL dataflows
@@ -107,14 +107,14 @@ Foundational RL training libraries that power the Agentic RL ecosystem.
 - HuggingFace model integration
 - 📄 [HybridFlow Paper](https://arxiv.org/abs/2409.19256)
 
-### [TRL](https://github.com/huggingface/trl)
+### [TRL](https://github.com/huggingface/trl) ![GitHub stars](https://img.shields.io/github/stars/huggingface/trl?style=social)
 `Python` | HuggingFace's official RL training library.
 
 - Deep integration with HF ecosystem (Trainer API)
 - PPO, DPO, RLOO, GRPO
 - Largest community, most comprehensive documentation
 
-### [PRIME](https://github.com/PRIME-RL/PRIME) ⭐ Medium
+### [PRIME](https://github.com/PRIME-RL/PRIME) ![GitHub stars](https://img.shields.io/github/stars/PRIME-RL/PRIME?style=social)
 `Python` | Scalable RL with implicit process rewards.
 
 - Implicit PRM training — no process annotations needed
@@ -128,24 +128,24 @@ Foundational RL training libraries that power the Agentic RL ecosystem.
 
 Agent orchestration and deployment frameworks (where Agentic RL models are served).
 
-### [LangGraph](https://github.com/langchain-ai/langgraph)
+### [LangGraph](https://github.com/langchain-ai/langgraph) ![GitHub stars](https://img.shields.io/github/stars/langchain-ai/langgraph?style=social)
 `Python` | Build resilient language agents as graphs.
 - Durable execution, human-in-the-loop, comprehensive memory
 - Production deployment via LangSmith
 - Trusted by Klarna, Replit, Elastic
 
-### [AutoGen](https://github.com/microsoft/autogen)
+### [AutoGen](https://github.com/microsoft/autogen) ![GitHub stars](https://img.shields.io/github/stars/microsoft/autogen?style=social)
 `Python` | Multi-agent AI framework (Microsoft).
 - Multi-agent conversation patterns, MCP tool integration
 - AgentTool for nested agent-as-tool patterns
 - No-code GUI (AutoGen Studio)
 
-### [CrewAI](https://github.com/crewAIInc/crewAI)
+### [CrewAI](https://github.com/crewAIInc/crewAI) ![GitHub stars](https://img.shields.io/github/stars/crewAIInc/crewAI?style=social)
 `Python` | Role-driven multi-agent framework.
 - Role-based agent definition (Role, Goal, Backstory)
 - Sequential / Hierarchical task flows
 
-### [OpenClaw](https://github.com/openclaw/openclaw)
+### [OpenClaw](https://github.com/openclaw/openclaw) ![GitHub stars](https://img.shields.io/github/stars/openclaw/openclaw?style=social)
 `TypeScript` | Personal AI assistant platform.
 - Single-user, local-first, 20+ channels (WhatsApp/Telegram/Discord/Feishu...)
 - Skill system, persistent memory, sub-agent orchestration
@@ -157,15 +157,15 @@ Agent orchestration and deployment frameworks (where Agentic RL models are serve
 
 | Project | Stars | Language | Core Focus | Key Differentiator |
 |---------|-------|----------|------------|-------------------|
-| **OpenClaw-RL** | 3k | TS | Conversation → RL for OpenClaw | Fully async, zero labeling, 3 learning paradigms |
-| **MetaClaw** | 1.3k | Python | Meta-learning + continual evolution | No GPU needed, smart scheduler, skill injection |
-| **Claw-R1** | 99 | Python | RL middleware for general agents | White-box/black-box decoupling, zero intrusion |
-| **Agent-R1** | High | Python | End-to-end agent RL training | Tool environment abstraction, process rewards |
-| **rLLM** | High | Python | Full-stack language agent RL | AgentWorkflowEngine, multiple SOTA models |
-| **OpenRLHF** | High | Python | General RLHF infrastructure | Ray+vLLM, production-ready, comprehensive algorithms |
-| **veRL** | High | Python | LLM RL training library | HybridFlow, flexible dataflows |
-| **TRL** | — | Python | HF official RL library | Largest community, HF ecosystem integration |
-| **PRIME** | Medium | Python | Implicit process reward RL | No annotation PRM, integrated into veRL |
+| **OpenClaw-RL** | ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/OpenClaw-RL?style=flat) | TS | Conversation → RL for OpenClaw | Fully async, zero labeling, 3 learning paradigms |
+| **MetaClaw** | ![GitHub stars](https://img.shields.io/github/stars/aiming-lab/MetaClaw?style=flat) | Python | Meta-learning + continual evolution | No GPU needed, smart scheduler, skill injection |
+| **Claw-R1** | ![GitHub stars](https://img.shields.io/github/stars/AgentR1/Claw-R1?style=flat) | Python | RL middleware for general agents | White-box/black-box decoupling, zero intrusion |
+| **Agent-R1** | ![GitHub stars](https://img.shields.io/github/stars/AgentR1/Agent-R1?style=flat) | Python | End-to-end agent RL training | Tool environment abstraction, process rewards |
+| **rLLM** | ![GitHub stars](https://img.shields.io/github/stars/rllm-org/rllm?style=flat) | Python | Full-stack language agent RL | AgentWorkflowEngine, multiple SOTA models |
+| **OpenRLHF** | ![GitHub stars](https://img.shields.io/github/stars/OpenRLHF/OpenRLHF?style=flat) | Python | General RLHF infrastructure | Ray+vLLM, production-ready, comprehensive algorithms |
+| **veRL** | ![GitHub stars](https://img.shields.io/github/stars/volcengine/verl?style=flat) | Python | LLM RL training library | HybridFlow, flexible dataflows |
+| **TRL** | ![GitHub stars](https://img.shields.io/github/stars/huggingface/trl?style=flat) | Python | HF official RL library | Largest community, HF ecosystem integration |
+| **PRIME** | ![GitHub stars](https://img.shields.io/github/stars/PRIME-RL/PRIME?style=flat) | Python | Implicit process reward RL | No annotation PRM, integrated into veRL |
 
 ---
 
