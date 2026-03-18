@@ -108,6 +108,26 @@ Scalable Agent RL framework and algorithm from MiniMax.
 - 🏫 Northwestern University (Jiajun Wu, Fei-Fei Li, Yejin Choi, Kyunghyun Cho)
 - 📄 [Paper V1](https://arxiv.org/abs/2504.20073) | [Paper V2](https://ragen-ai.github.io/v2)
 
+### [RLAnything](https://github.com/Gen-Verse/Open-AgentRL) ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/Open-AgentRL?style=social)
+`Python` | Closed-loop RL optimization across terminal, GUI, SWE, and tool-call settings.
+
+- Joint optimization of policy, reward model, and environment in a closed loop
+- Step-wise reward signals from optimized reward model outperform outcome-only human labels
+- Automatic environment adaptation via critic feedback from both policy and reward model
+- Released policy models (RLAnything-7B/8B) and reward models (RLAnything-Reward-8B/14B)
+- 📄 [Paper](https://arxiv.org/abs/2602.02488) | [Models](https://huggingface.co/collections/Gen-Verse/open-agentrl)
+
+### [DemyAgent](https://github.com/Gen-Verse/Open-AgentRL) ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/Open-AgentRL?style=social)
+`Python` | Agentic RL with deliberative reasoning — even 4B models outperform 32B.
+
+- Systematic study across data, algorithms, and reasoning modes for agentic RL
+- Real end-to-end trajectories + high-diversity datasets significantly outperform synthetic data
+- Exploration-friendly techniques: reward clipping + entropy maintenance
+- Deliberative reasoning with selective tool calls surpasses frequent invocation or verbose self-reasoning
+- DemyAgent-4B beats 32B models on AIME2024/2025, GPQA-Diamond, LiveCodeBench-v6
+- High-quality released data: 3K SFT + 30K RL samples
+- 📄 [Paper](https://arxiv.org/abs/2510.11701) | [Model](https://huggingface.co/Gen-Verse/DemyAgent-4B)
+
 ### [SkyRL-Agent](https://github.com/NovaSky-AI/SkyRL) ![GitHub stars](https://img.shields.io/github/stars/NovaSky-AI/SkyRL?style=social)
 `Python` | Efficient multi-turn, long-horizon agent RL training (UC Berkeley).
 
@@ -247,6 +267,8 @@ Agent orchestration and deployment frameworks (where Agentic RL models are serve
 | **SkyRL-Agent** | ![GitHub stars](https://img.shields.io/github/stars/NovaSky-AI/SkyRL?style=flat) | Python | Efficient multi-turn agent RL | Async dispatcher, AST-based tool, backend interoperability |
 | **Slime** | ![GitHub stars](https://img.shields.io/github/stars/THUDM/slime?style=flat) | Python | SGLang-native RL post-training | Native SGLang integration, prefix caching |
 | **AReaL** | ![GitHub stars](https://img.shields.io/github/stars/inclusionAI/AReaL?style=flat) | Python | Efficient RL with Tree Attention | DFS-based prefix tree, 8.31x throughput |
+| **RLAnything** | ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/Open-AgentRL?style=flat) | Python | Closed-loop agentic RL | Joint policy+reward+env optimization |
+| **DemyAgent** | ![GitHub stars](https://img.shields.io/github/stars/Gen-Verse/Open-AgentRL?style=flat) | Python | Deliberative agentic RL | 4B beats 32B, exploration-friendly techniques |
 | **Ray** | ![GitHub stars](https://img.shields.io/github/stars/ray-project/ray?style=flat) | Python | Distributed AI compute engine | RLlib, powers OpenRLHF and many RL frameworks |
 
 ---
@@ -283,6 +305,8 @@ Agent orchestration and deployment frameworks (where Agentic RL models are serve
 - [ThunderAgent: Program-Aware Agentic Inference System](https://arxiv.org/abs/2602.13692)
 - [Seer: Online Context Learning for Fast Synchronous LLM RL](https://arxiv.org/abs/2511.14617)
 - [AREAL-DTA: Dynamic Tree Attention for Efficient RL](https://arxiv.org/abs/2602.00482)
+- [RLAnything: Closed-loop RL Optimization](https://arxiv.org/abs/2602.02488)
+- [DemyAgent: Agentic RL with Deliberative Reasoning](https://arxiv.org/abs/2510.11701)
 
 ### Awesome Lists
 - [Awesome-Agent-RL](https://github.com/0russwest0/Awesome-Agent-RL) — Papers & resources on Agent RL
