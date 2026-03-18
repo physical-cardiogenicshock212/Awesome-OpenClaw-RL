@@ -82,6 +82,41 @@ Scalable Agent RL framework and algorithm from MiniMax.
 - Middleware-based architecture (inspired Claw-R1's design)
 - Decouples agent serving and RL training
 - Designed for large-scale online service agents
+- Context Management modeled as agent action for explicit training awareness
+- Prefix Tree Merging with MagiAttention for training-side KV cache sharing
+- Dynamic MTP, PD-disaggregated scheduling, global L3 KV Cache Pool
+
+### [ROLL](https://github.com/alibaba/ROLL) ![GitHub stars](https://img.shields.io/github/stars/alibaba/ROLL?style=social)
+`Python` | Agentic RL training framework for terminal environments (Alibaba).
+
+- Fully asynchronous training pipeline with environment-level async rollout
+- Two modes: **Roll-Managed** (flexible training-side context) / **CLI-Native** (deployment-consistent)
+- Companion tools: [ROCK](https://github.com/alibaba/ROCK) (sandbox manager) + [iFlow CLI](https://github.com/iflow-ai/iflow-cli) (agent framework)
+- Strict environment management to prevent reward hacking via residual artifacts
+- Chunked MDP: reward and importance sampling at environment-interaction chunk level
+- LLM-as-Judge data validation (ground-truth + no-op checks)
+- Model: [iFlow-ROME](https://huggingface.co/FutureLivingLab/iFlow-ROME)
+- 📄 [Technical Report](https://arxiv.org/abs/2512.24873) | [ROLL Flash](https://arxiv.org/abs/2510.11345) | [ROLLART](https://arxiv.org/abs/2512.22560)
+
+### [RAGEN](https://github.com/mll-lab-nu/RAGEN) ![GitHub stars](https://img.shields.io/github/stars/mll-lab-nu/RAGEN?style=social)
+`Python` | Flexible RL framework for training reasoning agents (Northwestern University).
+
+- **StarPO** framework (State-Thinking-Action-Reward Policy Optimization) for unified multi-turn agent RL
+- V2: **Reasoning Collapse diagnostics** + SNR-Adaptive Filtering for stable training
+- 10 built-in environments (Sokoban, WebShop, DeepCoder, Lean, Sudoku, etc.)
+- Gym-compatible interface for custom environments
+- 🏫 Northwestern University (Jiajun Wu, Fei-Fei Li, Yejin Choi, Kyunghyun Cho)
+- 📄 [Paper V1](https://arxiv.org/abs/2504.20073) | [Paper V2](https://ragen-ai.github.io/v2)
+
+### [SkyRL-Agent](https://github.com/NovaSky-AI/SkyRL) ![GitHub stars](https://img.shields.io/github/stars/NovaSky-AI/SkyRL?style=social)
+`Python` | Efficient multi-turn, long-horizon agent RL training (UC Berkeley).
+
+- Optimized asynchronous pipeline dispatcher (1.55x speedup over naive async batching)
+- AST-based search tool for code navigation during rollout
+- Backend interoperability with veRL, Tinker, and other RL frameworks
+- SA-SWE-32B: 39.4% Pass@1 on SWE-Bench Verified with 2x+ cost reduction
+- 🏫 UC Berkeley Sky Computing Lab (Ion Stoica, Matei Zaharia, Joseph Gonzalez)
+- 📄 [Paper](https://arxiv.org/abs/2511.16108)
 
 ---
 
@@ -122,6 +157,38 @@ Foundational RL training libraries that power the Agentic RL ecosystem.
 - Used for process reward normalization in Agent-R1
 - 📄 [Paper](https://arxiv.org/abs/2502.01456)
 
+### [Slime](https://github.com/THUDM/slime) ![GitHub stars](https://img.shields.io/github/stars/THUDM/slime?style=social)
+`Python` | SGLang-native post-training framework for RL scaling (Tsinghua University).
+
+- Deep integration with SGLang inference engine for native prefix caching support
+- Efficient rollout generation with SGLang's optimized serving backend
+- 🏫 Tsinghua University (THUDM)
+
+### [AReaL](https://github.com/inclusionAI/AReaL) ![GitHub stars](https://img.shields.io/github/stars/inclusionAI/AReaL?style=social)
+`Python` | Efficient RL training with Dynamic Tree Attention (Ant Group).
+
+- **AREAL-DTA**: DFS-based prefix tree traversal for rollout KV cache sharing during training
+- Materializes only a single root-to-leaf path at a time — avoids full attention mask
+- Load-balanced distributed batching across multiple GPUs
+- Up to 8.31x training throughput improvement
+- 📄 [Paper](https://arxiv.org/abs/2602.00482)
+
+### [Ray](https://github.com/ray-project/ray) ![GitHub stars](https://img.shields.io/github/stars/ray-project/ray?style=social)
+`Python` | Unified distributed AI compute engine.
+
+- Core distributed runtime + AI libraries (Data, Train, Tune, RLlib, Serve)
+- **RLlib**: scalable reinforcement learning library
+- Powers distributed training in OpenRLHF and many other RL frameworks
+- Flexible task parallelism, fault tolerance, and elastic scaling
+
+### [Seer](https://arxiv.org/abs/2511.14617)
+Online context learning system for fast synchronous LLM reinforcement learning (Kimi/Moonshot).
+
+- **Divided Rollout**: splits requests into 8K chunks for dynamic load balancing
+- **Context-Aware Scheduling**: uses speculative requests to estimate group response lengths
+- **Adaptive Grouped Speculative Decoding** with distributed compressed suffix tree
+- 74-97% rollout throughput improvement, 75-93% long-tail latency reduction
+
 ---
 
 ## 🏗️ Agent Infrastructure
@@ -145,6 +212,15 @@ Agent orchestration and deployment frameworks (where Agentic RL models are serve
 - Role-based agent definition (Role, Goal, Backstory)
 - Sequential / Hierarchical task flows
 
+### [ThunderAgent](https://github.com/Agentic-Kinetics/ThunderAgent) ![GitHub stars](https://img.shields.io/github/stars/Agentic-Kinetics/ThunderAgent?style=social)
+`Python` | Program-aware agentic inference system for optimized serving and RL rollout.
+
+- Abstracts agent workflows as **LLM Programs** with unified KV cache / tool / state management
+- **State-Aware Pausing**: pauses low-priority programs under memory pressure, releases KV cache
+- Hook-based garbage collection + asynchronous environment preparation
+- 1.5-3.6x throughput in serving, 1.8-3.9x in RL rollout, up to 4.2x disk memory savings
+- 📄 [Paper](https://arxiv.org/abs/2602.13692)
+
 ### [OpenClaw](https://github.com/openclaw/openclaw) ![GitHub stars](https://img.shields.io/github/stars/openclaw/openclaw?style=social)
 `TypeScript` | Personal AI assistant platform.
 - Single-user, local-first, 20+ channels (WhatsApp/Telegram/Discord/Feishu...)
@@ -166,6 +242,12 @@ Agent orchestration and deployment frameworks (where Agentic RL models are serve
 | **veRL** | ![GitHub stars](https://img.shields.io/github/stars/volcengine/verl?style=flat) | Python | LLM RL training library | HybridFlow, flexible dataflows |
 | **TRL** | ![GitHub stars](https://img.shields.io/github/stars/huggingface/trl?style=flat) | Python | HF official RL library | Largest community, HF ecosystem integration |
 | **PRIME** | ![GitHub stars](https://img.shields.io/github/stars/PRIME-RL/PRIME?style=flat) | Python | Implicit process reward RL | No annotation PRM, integrated into veRL |
+| **ROLL** | ![GitHub stars](https://img.shields.io/github/stars/alibaba/ROLL?style=flat) | Python | Terminal agent RL training | Async pipeline, strict env management, chunked MDP |
+| **RAGEN** | ![GitHub stars](https://img.shields.io/github/stars/mll-lab-nu/RAGEN?style=flat) | Python | Reasoning agent RL (StarPO) | Reasoning collapse diagnostics, 10+ environments |
+| **SkyRL-Agent** | ![GitHub stars](https://img.shields.io/github/stars/NovaSky-AI/SkyRL?style=flat) | Python | Efficient multi-turn agent RL | Async dispatcher, AST-based tool, backend interoperability |
+| **Slime** | ![GitHub stars](https://img.shields.io/github/stars/THUDM/slime?style=flat) | Python | SGLang-native RL post-training | Native SGLang integration, prefix caching |
+| **AReaL** | ![GitHub stars](https://img.shields.io/github/stars/inclusionAI/AReaL?style=flat) | Python | Efficient RL with Tree Attention | DFS-based prefix tree, 8.31x throughput |
+| **Ray** | ![GitHub stars](https://img.shields.io/github/stars/ray-project/ray?style=flat) | Python | Distributed AI compute engine | RLlib, powers OpenRLHF and many RL frameworks |
 
 ---
 
@@ -179,6 +261,9 @@ Agent orchestration and deployment frameworks (where Agentic RL models are serve
 6. **Safety & Controllability** — Reward hacking prevention, constitutional RL constraints
 7. **Evaluation Standardization** — Unified Agent RL benchmarks combining online tasks + offline metrics
    - [EvoClaw](https://arxiv.org/abs/2603.13428) — A benchmark evaluating AI agents on continuous software evolution via Milestone DAGs reconstructed from commit logs. Tests agents' ability to sustain system integrity and limit error accumulation over long-term evolution. Finds that frontier model performance drops from >80% on isolated tasks to ≤38% in continuous settings.
+8. **KV Cache Management & Sharing** — Cross-request prefix sharing, global cache pools, and program-aware scheduling (ThunderAgent, ForgeRL, Seer)
+9. **Reasoning Collapse in Agent RL** — Diagnosing and mitigating template collapse during multi-turn agent training (RAGEN V2)
+10. **Environment Isolation & Integrity** — Preventing reward hacking through strict sandbox management and residual artifact cleanup (ROLL, ThunderAgent)
 
 ---
 
@@ -192,6 +277,12 @@ Agent orchestration and deployment frameworks (where Agentic RL models are serve
 - [SDFT: Self-Distilled Fine-Tuning](https://arxiv.org/abs/2601.19897)
 - [SDPO: Self-Distilled Policy Optimization](https://arxiv.org/abs/2601.20802)
 - [HybridFlow: A Flexible and Efficient RLHF Framework](https://arxiv.org/abs/2409.19256)
+- [ROLL: Agentic RL in Terminal Environments](https://arxiv.org/abs/2512.24873)
+- [RAGEN: Understanding Self-Evolution in LLM Agents via Multi-Turn RL](https://arxiv.org/abs/2504.20073)
+- [SkyRL-Agent: Efficient RL Training for Multi-turn LLM Agent](https://arxiv.org/abs/2511.16108)
+- [ThunderAgent: Program-Aware Agentic Inference System](https://arxiv.org/abs/2602.13692)
+- [Seer: Online Context Learning for Fast Synchronous LLM RL](https://arxiv.org/abs/2511.14617)
+- [AREAL-DTA: Dynamic Tree Attention for Efficient RL](https://arxiv.org/abs/2602.00482)
 
 ### Awesome Lists
 - [Awesome-Agent-RL](https://github.com/0russwest0/Awesome-Agent-RL) — Papers & resources on Agent RL
