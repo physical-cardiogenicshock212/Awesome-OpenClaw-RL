@@ -257,6 +257,16 @@ Agent orchestration and deployment frameworks (where Agentic RL models are serve
 - Skill system, persistent memory, sub-agent orchestration
 - The primary target platform for OpenClaw-RL and MetaClaw
 
+### [EdgeClaw](https://github.com/OpenBMB/EdgeClaw) ![GitHub stars](https://img.shields.io/github/stars/OpenBMB/EdgeClaw?style=social)
+`TypeScript` | Edge-Cloud Collaborative AI Agent — sensitive data stays local, cloud handles reasoning.
+
+- **Three-Tier Security Collaboration**: S1 (safe → cloud), S2 (sensitive → desensitize), S3 (private → local only)
+- **Cost-Aware Routing**: Local LLM-as-Judge classifies task complexity for economical cloud model selection
+- **Zero Code Changes**: Hook-based interception seamlessly extends OpenClaw
+- **Dual-Track Memory**: Separate histories for cloud (desensitized) and local (full data)
+- Built on OpenClaw, jointly developed by THUNLP, Renmin University, AI9Stars, ModelBest, OpenBMB
+- 🏫 THUNLP (Tsinghua University)
+
 ---
 
 ## 📊 Comparison Matrix
